@@ -1,0 +1,86 @@
+apiVersion: v1
+entries:
+  cet:
+  - apiVersion: v2
+    appVersion: 5.24.7
+    created: "2023-08-01T05:30:28.433738144Z"
+    dependencies:
+    - name: et-service
+      repository: file://../et-service
+      version: 0.5.x
+    - name: et-collector
+      repository: file://../et-collector
+      version: 0.5.x
+    - alias: et-receiver-hit
+      condition: enable-receivers
+      name: et-receiver
+      repository: file://../et-receiver
+      version: 0.5.x
+    - alias: et-receiver-decompile
+      condition: enable-receivers
+      name: et-receiver
+      repository: file://../et-receiver
+      version: 0.5.x
+    - alias: et-receiver-sql
+      condition: enable-receivers
+      name: et-receiver
+      repository: file://../et-receiver
+      version: 0.5.x
+    - alias: et-receiver-agent
+      condition: enable-receivers
+      name: et-receiver
+      repository: file://../et-receiver
+      version: 0.5.x
+    description: A Helm chart for CET
+    digest: 827c5c3da4190bb79ba52c20b8df7093b5fdb0f188a641976d869a12ddbe31c0
+    name: cet
+    type: application
+    urls:
+    - https://github.com/harness/helm-cet/releases/download/cet-0.5.0/cet-0.5.0.tgz
+    version: 0.5.0
+  et-collector:
+  - apiVersion: v2
+    appVersion: 5.23.0
+    created: "2023-08-01T05:30:28.630147256Z"
+    dependencies:
+    - name: harness-common
+      repository: https://harness.github.io/helm-common
+      version: 1.x.x
+    description: A Helm chart for Kubernetes
+    digest: 1bab4f771ca89b299dd6463926f53479f0bf92d6352cec98704effa9316098e9
+    name: et-collector
+    type: application
+    urls:
+    - https://github.com/harness/helm-cet/releases/download/et-collector-0.5.0/et-collector-0.5.0.tgz
+    version: 0.5.0
+  et-receiver:
+  - apiVersion: v2
+    appVersion: 5.23.1
+    created: "2023-08-01T05:30:28.815752461Z"
+    dependencies:
+    - name: harness-common
+      repository: https://harness.github.io/helm-common
+      version: 1.x.x
+    description: A Helm chart for Kubernetes
+    digest: 10c645015a2b43b693a27da3be6b1c9e16882c631d336f8c650babb541ac8035
+    name: et-receiver
+    type: application
+    urls:
+    - https://github.com/harness/helm-cet/releases/download/et-receiver-0.5.0/et-receiver-0.5.0.tgz
+    version: 0.5.0
+  et-service:
+  - apiVersion: v2
+    appVersion: 5.23.1
+    created: "2023-08-01T05:30:28.974248918Z"
+    dependencies:
+    - name: harness-common
+      repository: https://harness.github.io/helm-common
+      version: 1.x.x
+    description: A Helm chart for Harness ET Service
+    digest: 96598fcc4e3999f2b10a9ed8803b33aadd6d471bb0b850cfdfe6d0e92599fef5
+    name: et-service
+    type: application
+    urls:
+    - https://github.com/harness/helm-cet/releases/download/et-service-0.5.0/et-service-0.5.0.tgz
+    version: 0.5.0
+generated: "2023-08-01T05:30:28.974353814Z"
